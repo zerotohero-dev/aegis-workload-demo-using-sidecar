@@ -7,8 +7,8 @@
 #
 
 VERSION=0.7.0
-PACKAGE=aegis-workload-demo
-REPO=z2hdev/aegis-workload-demo
+PACKAGE=aegis-workload-demo-using-sidecar
+REPO=z2hdev/aegis-workload-demo-using-sidecar
 
 all: build bundle push deploy
 
