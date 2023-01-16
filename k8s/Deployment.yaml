@@ -85,6 +85,12 @@ spec:
         # the `mountPath` of `aegis-secrets-volume` on this container too.
         - name: AEGIS_SIDECAR_SECRETS_PATH
           value: "/opt/aegis/secrets.json"
+        # How frequently the sidecar container asks for fresh data (in seconds).
+        # The default value is 20 seconds. The shorter the interval is, the
+        # more up-to-date the secrets will be; however, shorter intervals also
+        # mean more pressure on the Aegis Safe API.
+        - name: AEGIS_SIDECAR_POLL_INTERVAL
+          value: "30"
         #
         # Resource allocation will highly-depend on the system.
         # Benchmark your deployment, monitor your resource utilization, and
