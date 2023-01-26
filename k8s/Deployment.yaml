@@ -61,7 +61,7 @@ spec:
         #
         # env:
         #
-        # You can configure Aegis Safe by providing environment variables.
+        # You can configure this workload by providing environment variables.
         #
         # See https://aegis.z2h.dev/docs/architecture for more information about
         # these environment variables.
