@@ -6,7 +6,7 @@
 #     .\_/.
 #
 
-VERSION=0.10.0
+VERSION=0.11.0
 PACKAGE=aegis-workload-demo-using-sidecar
 REPO=z2hdev/aegis-workload-demo-using-sidecar
 
