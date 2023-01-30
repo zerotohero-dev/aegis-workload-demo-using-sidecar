@@ -9,7 +9,7 @@
 VERSION=0.11.0
 PACKAGE=aegis-workload-demo-using-sidecar
 REPO=z2hdev/aegis-workload-demo-using-sidecar
-REPO_LOCAL="$(minikube ip):5000/aegis-workload-demo-using-sidecar"
+REPO_LOCAL="$(shell minikube ip):5000/aegis-workload-demo-using-sidecar"
 
 all: build bundle push deploy
 
