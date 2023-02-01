@@ -27,6 +27,7 @@ func main() {
 		dat, err := os.ReadFile(sidecarSecretsPath())
 		if err != nil {
 			fmt.Println("Failed to read the secrets file. Will retry in 5 seconds…")
+			fmt.Println(err.Error())
 		} else {
 			fmt.Println("secret: '", string(dat), "'")
 		}
