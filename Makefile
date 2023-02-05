@@ -6,7 +6,7 @@
 #     .\_/.
 #
 
-VERSION=0.12.10
+VERSION=0.12.30
 PACKAGE=aegis-workload-demo-using-sidecar
 REPO=z2hdev/aegis-workload-demo-using-sidecar
 REPO_LOCAL="localhost:5000/aegis-workload-demo-using-sidecar"
