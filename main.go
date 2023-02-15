@@ -11,6 +11,8 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/signal"
+	"syscall"
 	"time"
 )
 
@@ -23,6 +25,18 @@ func sidecarSecretsPath() string {
 }
 
 func main() {
+	go func() {
+		// Block the process from exiting, but also be graceful and honor the
+		// termination signals that may come from the orchestrator.
+		s := make(chan os.Signal, 1)
+		signal.Notify(s, syscall.SIGINT, syscall.SIGTERM)
+		select {
+		case e := <-s:
+			fmt.Println(e)
+			panic("bye cruel world!")
+		}
+	}()
+
 	for {
 		dat, err := os.ReadFile(sidecarSecretsPath())
 		if err != nil {
