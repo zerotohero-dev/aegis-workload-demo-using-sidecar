@@ -10,5 +10,4 @@
 
 PACKAGE="$1"
 
-go mod vendor
-go build -o ${PACKAGE}
+go build -o "${PACKAGE}"

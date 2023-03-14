@@ -22,7 +22,7 @@ run:
 	./hack/run.sh
 
 bundle:
-	./hack/bundle.sh
+	./hack/bundle.sh $(PACKAGE) $(VERSION)
 
 push:
 	./hack/push.sh $(PACKAGE) $(VERSION) $(REPO)
